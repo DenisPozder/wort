@@ -1,0 +1,62 @@
+.button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color);
+    border-radius: 80px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.button span {
+    color: var(--color);
+    text-transform: uppercase;
+    font-family: var(--heading_font);
+    font-size: 1.2rem;
+    z-index: 1;
+    transition: .4s ease;
+}
+
+.button:hover span {
+    color: var(--background_color);
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: var(--color);
+    transition: width .4s ease;
+}
+
+.button:hover::after {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1600px) {
+    .button span {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .button span {
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .button span {
+        font-size: .6rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .button span {
+        font-size: .5rem;
+    }
+}
