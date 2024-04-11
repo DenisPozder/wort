@@ -61,6 +61,7 @@ const Hero = () => {
           src="/Home/WortHandLeft.png"
           className={styles.hero_left_hand}
           alt="Wort left hand"
+          loading="lazy"
         />
         <Image
           width={500}
@@ -68,6 +69,7 @@ const Hero = () => {
           src="/Home/WortCircle.png"
           className={styles.hero_circle}
           alt="Wort circle"
+          loading="lazy"
         />
         <Image
           width={500}
@@ -75,6 +77,7 @@ const Hero = () => {
           src="/Home/WortHandRight.png"
           className={styles.hero_right_hand}
           alt="Wort right hand"
+          loading="lazy"
         />
         <div className={styles.ht_content}>
           <h1 className={styles.ht_title}>
@@ -102,6 +105,7 @@ const Hero = () => {
                 width={400}
                 height={100}
                 alt="Hero section image"
+                loading="lazy"
               />
             </div>
             <div className={styles.hero_btn}>
@@ -114,7 +118,8 @@ const Hero = () => {
         <div className={styles.hero_bottom} ref={bottomSectionRef}>
           <div className={styles.hero_bottom_content}>
             <div className={styles.hero_bottom_img}>
-              <img
+              <Image width={1520} height={1520}
+              loading="lazy"
                 src={"/Home/sample.jpg"}
                 className={`${styles.hb_img} ${
                   (isInHero || isScrolledPastHero) ? styles.visible : styles.hidden
