@@ -8,12 +8,11 @@ import Button from "@/Components/Button/Button";
 import DelayedScrolling from "@/Components/DelayedScrolling";
 
 const Hero = () => {
-  const [isImageVisible, setIsImageVisible] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-
+  const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
+  const [isInHero, setIsInHero] = useState(false)
   const showContent = DelayedScrolling(2000);
 
-  const imageRef = useRef(null);
+  const heroSectionRef = useRef(null)
   const bottomSectionRef = useRef(null);
 
   const scrollToBottomSection = () => {
@@ -25,43 +24,33 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
-      setLastScrollTop(scrollTop);
-
-      if (scrollDirection === "down" && !isImageVisible) {
-        setIsImageVisible(true);
-      } else if (scrollDirection === "up" && isImageVisible) {
-        setIsImageVisible(false);
-      }
+      setIsScrolledPastHero(scrollTop > heroSectionRef.current.offsetTop)
     };
 
     const handleIntersection = (entries) => {
       const entry = entries[0];
-
-      setIsImageVisible(entry.intersectionRatio > 0);
+      setIsInHero(entry.isIntersecting)
     };
 
-    const options = {
-      threshold: 0,
-      rootMargin: `0px 0px -200px 0px`,
-    };
+    const heroObserver = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5,
+      rootMargin: `0px 0px -300px 0px`,
+    });
 
-    const observer = new IntersectionObserver(handleIntersection, options);
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
+    if (heroSectionRef.current) {
+      heroObserver.observe(heroSectionRef.current);
     }
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
+      if (heroSectionRef.current) {
+        heroObserver.unobserve(heroSectionRef.current);
       }
 
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [imageRef, lastScrollTop, isImageVisible]);
+  }, [heroSectionRef]);
 
   return (
     <div className={styles.hero}>
@@ -99,13 +88,13 @@ const Hero = () => {
           <span className={styles.ht_arrow} onClick={scrollToBottomSection}>
             <ArrowDown />
           </span>
-          <div className={styles.ht_bottom}>
+          <div className={styles.ht_bottom} ref={heroSectionRef}>
             <div className={styles.hero_btn}>
               <Button href={"#"} title={"our projects"} />
             </div>
             <div
               className={`${styles.ht_bottom_img} ${
-                isImageVisible ? styles.hide : styles.show
+                (isInHero || isScrolledPastHero) ? styles.hide : styles.show
               }`}
             >
               <Image
@@ -128,10 +117,9 @@ const Hero = () => {
               <img
                 src={"/Home/sample.jpg"}
                 className={`${styles.hb_img} ${
-                  isImageVisible ? styles.visible : styles.hidden
+                  (isInHero || isScrolledPastHero) ? styles.visible : styles.hidden
                 }`}
                 alt="Hero bottom image"
-                ref={imageRef}
               />
             </div>
           </div>

@@ -17,9 +17,8 @@ const RecentProjects = () => {
             <div className={styles.rp_header}>
               <div className={styles.rp_header_top}>
                 <h1 className={styles.rp_title}>
-                  recent
-                  <br />
-                  projects
+                  <span>recent</span>
+                  <span>projects</span>
                 </h1>
                 <p className={styles.rp_par}>
                   Our projects are various, but here are some of the most recent
