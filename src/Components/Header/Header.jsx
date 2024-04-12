@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './header.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -16,9 +16,26 @@ const Header = () => {
 
     const pathname = usePathname()
 
+    const [headerScroll, setHeaderScroll] = useState(false)
+    const headerBackground = () => {
+        if(window.scrollY > 0) {
+            setHeaderScroll(true)
+        } else {
+            setHeaderScroll(false)
+        }
+    }
+
+    useEffect(() => {
+     window.addEventListener('scroll', headerBackground)   
+
+     return () => {
+        window.removeEventListener('scroll', headerBackground)
+     }
+    },[])
+
   return (
     <div className={styles.header}>
-        <div className={pathname === '/' ? styles.header_content : styles.header_wrap}>
+        <div className={`${pathname === '/' ? styles.header_content : styles.header_wrap} ${headerScroll ? styles.header_scroll : ''}`}>
             <div className={styles.header_margin}>
                 <Link href="/" className={`${styles.header_logo} ${darkTheme ? styles.dark : ''}`}>
                     <Image width={500} className={styles.hl_white} height={500} src={"/wort-logo-white.png"} alt='Wort logo' />

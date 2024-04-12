@@ -7,6 +7,7 @@ import Image from "next/image";
 import DelayedScrolling from "@/Components/DelayedScrolling";
 
 const RecentProjects = () => {
+
   const showContent = DelayedScrolling(2000);
 
   return (
