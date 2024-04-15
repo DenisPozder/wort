@@ -68,18 +68,20 @@
     display: flex;
 }
 
-.rp_project_text .left {
+.rp_project_text .rp_text_right {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
-.rp_project_text .right {
+.rp_project_text .rp_text_left {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
 .rp_project_btn {
@@ -89,10 +91,6 @@
 
 .rp_project_desc {
     margin: 2rem 0;
-}
-
-.swap {
-    flex-direction: row-reverse;
 }
 
 .rp_project_img {
@@ -225,6 +223,14 @@
 
     .rp_btn {
         margin-top: 1rem;
+    }
+
+    .rp_project_text .rp_text_left {
+        align-items: flex-start;
+    }
+
+    .rp_project.swap {
+        flex-direction: column-reverse;
     }
 }
 

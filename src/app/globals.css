@@ -58,6 +58,57 @@ h3 {
   font-size: 3rem;
 }
 
+.from-left {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.from-left.appear {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.from-right {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.from-right.appear {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.img-right {
+  transform: translateX(70%) rotate(10deg);
+  transition: transform .3s ease-in-out;
+}
+
+.img-right.appear {
+  transform: translateX(0%) rotate(0deg);
+}
+
+.img-left {
+  transform: translateX(-70%) rotate(-10deg);
+  transition: transform .3s ease-in-out;
+}
+
+.img-left.appear {
+  transform: translateX(0%) rotate(0deg);
+}
+
+.from-bottom {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.from-bottom.appear {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 @media only screen and (max-width: 1600px) {
   h1 {
     font-size: 4rem !important;

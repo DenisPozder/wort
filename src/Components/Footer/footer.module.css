@@ -26,6 +26,7 @@
     width: 20%;
     height: 100px;
     margin: 4rem 0;
+    transition-delay: .2s;
 }
 
 .footer_bottom {
@@ -43,6 +44,7 @@
     border-top: 2px solid var(--color);
     border-bottom: 2px solid var(--color);
     margin-bottom: 8rem;
+    transition-delay: .2s;
 }
 
 .fb_item {

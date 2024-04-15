@@ -5,14 +5,12 @@ import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Button from "@/Components/Button/Button";
-import DelayedScrolling from "@/Components/DelayedScrolling";
 
 const Hero = () => {
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
-  const [isInHero, setIsInHero] = useState(false)
-  const showContent = DelayedScrolling(2000);
+  const [isInHero, setIsInHero] = useState(false);
 
-  const heroSectionRef = useRef(null)
+  const heroSectionRef = useRef(null);
   const bottomSectionRef = useRef(null);
 
   const scrollToBottomSection = () => {
@@ -24,12 +22,12 @@ const Hero = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsScrolledPastHero(scrollTop > heroSectionRef.current.offsetTop)
+      setIsScrolledPastHero(scrollTop > heroSectionRef.current.offsetTop);
     };
 
     const handleIntersection = (entries) => {
       const entry = entries[0];
-      setIsInHero(entry.isIntersecting)
+      setIsInHero(entry.isIntersecting);
     };
 
     const heroObserver = new IntersectionObserver(handleIntersection, {
@@ -97,7 +95,7 @@ const Hero = () => {
             </div>
             <div
               className={`${styles.ht_bottom_img} ${
-                (isInHero || isScrolledPastHero) ? styles.hide : styles.show
+                isInHero || isScrolledPastHero ? styles.hide : styles.show
               }`}
             >
               <Image
@@ -114,22 +112,22 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      {showContent && (
-        <div className={styles.hero_bottom} ref={bottomSectionRef}>
-          <div className={styles.hero_bottom_content}>
-            <div className={styles.hero_bottom_img}>
-              <Image width={1520} height={1520}
+      <div className={styles.hero_bottom} ref={bottomSectionRef}>
+        <div className={styles.hero_bottom_content}>
+          <div className={styles.hero_bottom_img}>
+            <Image
+              width={1520}
+              height={1520}
               loading="lazy"
-                src={"/Home/sample.jpg"}
-                className={`${styles.hb_img} ${
-                  (isInHero || isScrolledPastHero) ? styles.visible : styles.hidden
-                }`}
-                alt="Hero bottom image"
-              />
-            </div>
+              src={"/Home/sample.jpg"}
+              className={`${styles.hb_img} ${
+                isInHero || isScrolledPastHero ? styles.visible : styles.hidden
+              }`}
+              alt="Hero bottom image"
+            />
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
