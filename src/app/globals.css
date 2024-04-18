@@ -109,6 +109,11 @@ h3 {
   opacity: 1;
 }
 
+.parallax {
+  transform: translate(-50%, -50%);
+  transition: 0.45s cubic-bezier(.2, .49, .32, .99);
+}
+
 @media only screen and (max-width: 1600px) {
   h1 {
     font-size: 4rem !important;

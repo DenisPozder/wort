@@ -20,6 +20,7 @@
 .footer_top h1 {
     text-transform: uppercase;
     text-align: center;
+    padding-top: 2rem;
 }
 
 .footer_top .footer_btn {

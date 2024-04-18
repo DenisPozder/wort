@@ -56,7 +56,7 @@ const Hero = () => {
     const sliders = document.querySelectorAll(".slide-in");
 
     const appearOptions = {
-      threshold: 0.4,
+      threshold: 0.3,
     };
 
     const appearOnScroll = new IntersectionObserver(function (

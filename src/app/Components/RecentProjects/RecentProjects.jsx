@@ -28,7 +28,10 @@ const RecentProjects = () => {
           {Projects.slice(0, 2).map((project, index) => (
             <>
               {index % 2 !== 0 ? (
-                <div key={index} className={`${styles.rp_project} ${styles.swap}`}>
+                <div
+                  key={index}
+                  className={`${styles.rp_project} ${styles.swap}`}
+                >
                   <div className={`${styles.rp_project_img} img-left slide-in`}>
                     <Image src={project.image} alt={project.title} fill />
                   </div>

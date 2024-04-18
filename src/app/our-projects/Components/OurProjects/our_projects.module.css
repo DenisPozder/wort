@@ -1,0 +1,96 @@
+.our_projects {
+    width: 100%;
+    height: auto;
+}
+
+/*----- Single Project -----*/
+.op_project {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*----- Project Header -----*/
+.op_project_header {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+    background-color: var(--mid_tone);
+    z-index: 10;
+}
+
+.op_header_content {
+    margin: 0 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.op_header_sd {
+    font-weight: bold;
+    margin: 2rem 0;
+    max-width: 800px;
+}
+
+.op_header_td {
+    max-width: 800px;
+}
+
+.op_header_btn {
+    width: 20%;
+    height: 100px;
+}
+
+/*----- Our project images -----*/
+.op_project_images {
+    width: 100%;
+    height: 1400px;
+    overflow: hidden;
+}
+
+.op_images_content {
+    margin: 0 200px;
+    width: auto;
+    height: 100%;
+    position: relative;
+}
+
+.op_image_front {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.op_image_front img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: calc(50% + 50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.3);
+}
+
+.op_image_back {
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    right: 0 !important;
+    top: 200px;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+}
+
+.op_image_back img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: calc(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
