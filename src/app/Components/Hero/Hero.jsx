@@ -11,12 +11,12 @@ const Hero = () => {
   const [isInHero, setIsInHero] = useState(false);
 
   const heroSectionRef = useRef(null);
-  const bottomSectionRef = useRef(null);
 
-  const scrollToBottomSection = () => {
-    if (bottomSectionRef.current) {
-      bottomSectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
   };
 
   useEffect(() => {
@@ -49,6 +49,39 @@ const Hero = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [heroSectionRef]);
+
+  /*----- Intersection Observer -----*/
+  useEffect(() => {
+    const faders = document.querySelectorAll(".fade-in");
+    const sliders = document.querySelectorAll(".slide-in");
+
+    const appearOptions = {
+      threshold: 0.4,
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (
+      entries,
+      appearOnScroll
+    ) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add("appear");
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    },
+    appearOptions);
+
+    faders.forEach((fader) => {
+      appearOnScroll.observe(fader);
+    });
+
+    sliders.forEach((slider) => {
+      appearOnScroll.observe(slider);
+    });
+  }, []);
 
   return (
     <div className={styles.hero}>
@@ -86,12 +119,12 @@ const Hero = () => {
             Welcome to Wort, where we specialize in conceptualizing and
             designing engaging websites and brand identities.
           </p>
-          <span className={styles.ht_arrow} onClick={scrollToBottomSection}>
+          <span className={styles.ht_arrow} onClick={scrollToBottom}>
             <ArrowDown />
           </span>
           <div className={styles.ht_bottom} ref={heroSectionRef}>
             <div className={styles.hero_btn}>
-              <Button href={"#"} title={"our projects"} />
+              <Button href={"/our-projects"} title={"our projects"} />
             </div>
             <div
               className={`${styles.ht_bottom_img} ${
@@ -112,7 +145,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className={styles.hero_bottom} ref={bottomSectionRef}>
+      <div className={styles.hero_bottom}>
         <div className={styles.hero_bottom_content}>
           <div className={styles.hero_bottom_img}>
             <Image

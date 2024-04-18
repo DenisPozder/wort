@@ -32,44 +32,11 @@ const Header = () => {
     };
   }, []);
 
-  /*----- Intersection Observer -----*/
-  useEffect(() => {
-    const faders = document.querySelectorAll(".fade-in");
-    const sliders = document.querySelectorAll(".slide-in");
-
-    const appearOptions = {
-      threshold: 0.4,
-    };
-
-    const appearOnScroll = new IntersectionObserver(function (
-      entries,
-      appearOnScroll
-    ) {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        } else {
-          entry.target.classList.add("appear");
-          appearOnScroll.unobserve(entry.target);
-        }
-      });
-    },
-    appearOptions);
-
-    faders.forEach((fader) => {
-      appearOnScroll.observe(fader);
-    });
-
-    sliders.forEach((slider) => {
-      appearOnScroll.observe(slider);
-    });
-  }, []);
-
   return (
     <div className={styles.header}>
       <div
         className={`${
-          pathname === "/" ? styles.header_content : styles.header_wrap
+          styles.header_content
         } ${headerScroll ? styles.header_scroll : ""}`}
       >
         <div className={styles.header_margin}>

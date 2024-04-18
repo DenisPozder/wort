@@ -46,7 +46,7 @@
     transform: translate(-50%, -50%);
     width: 50%;
     height: auto;
-    animation: spin 15s linear infinite, circleAnim 1s ease-in-out forwards;
+    animation: spin 22s linear infinite, circleAnim 1s ease-in-out forwards;
 }
 
 @keyframes circleAnim {
@@ -382,7 +382,7 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1100px) {
     .hero_top .ht_content {
         margin: 0 80px;
     }
