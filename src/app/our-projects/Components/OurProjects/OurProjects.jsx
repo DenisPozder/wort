@@ -7,6 +7,39 @@ import Button from "@/Components/Button/Button";
 import Image from "next/image";
 
 const OurProjects = () => {
+  /*----- Intersection Observer -----*/
+  useEffect(() => {
+    const faders = document.querySelectorAll(".fade-in");
+    const sliders = document.querySelectorAll(".slide-in");
+
+    const appearOptions = {
+      threshold: 0.3,
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (
+      entries,
+      appearOnScroll
+    ) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add("appear");
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    },
+    appearOptions);
+
+    faders.forEach((fader) => {
+      appearOnScroll.observe(fader);
+    });
+
+    sliders.forEach((slider) => {
+      appearOnScroll.observe(slider);
+    });
+  }, []);
+
   useEffect(() => {
     /*----- Paralax effect on scroll ------*/
     const parallax_el = document.querySelectorAll(".parallax");
@@ -40,11 +73,17 @@ const OurProjects = () => {
             <div className={styles.op_project_header}>
               <div className={styles.op_header_content}>
                 <div className={styles.op_header_left}>
-                  <h1 className={styles.op_header_title}>{project.title}</h1>
-                  <p className={styles.op_header_sd}>{project.secondDesc}</p>
-                  <p className={styles.op_header_td}>{project.thirdDesc}</p>
+                  <h1 className={`${styles.op_header_title} from-left slide-in`}>
+                    {project.title}
+                  </h1>
+                  <p className={`${styles.op_header_sd} from-left slide-in`}>
+                    {project.secondDesc}
+                  </p>
+                  <p className={`${styles.op_header_td} from-left slide-in`}>
+                    {project.thirdDesc}
+                  </p>
                 </div>
-                <div className={styles.op_header_btn}>
+                <div className={`${styles.op_header_btn} from-bottom slide-in`}>
                   <Button title={"visit website"} href={project.websiteLink} />
                 </div>
               </div>

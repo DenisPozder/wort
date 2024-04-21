@@ -31,10 +31,12 @@
     font-weight: bold;
     margin: 2rem 0;
     max-width: 800px;
+    transition-delay: .2s;
 }
 
 .op_header_td {
     max-width: 800px;
+    transition-delay: .4s;
 }
 
 .op_header_btn {
