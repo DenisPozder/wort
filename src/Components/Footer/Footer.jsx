@@ -12,22 +12,22 @@ const Footer = () => {
         <div className={styles.footer_top}>
           <h1 className="slide-in from-bottom">time to make a change</h1>
           <div className={`${styles.footer_btn} slide-in from-bottom`}>
-            <Button href={"#"} title={"let's talk"} />
+            <Button href={"tel:+381616212415"} title={"let's talk"} />
           </div>
         </div>
         <div className={styles.footer_bottom}>
           <div className={`${styles.fb_grid} slide-in from-bottom`}>
             <div className={styles.fb_item}>
               <h3>email</h3>
-              <Link href={"mailto:hello@wort.com"}>hello@wort.com</Link>
+              <Link href={"mailto:office@wort.rs"}>office@wort.rs</Link>
             </div>
             <div className={styles.fb_item}>
               <h3>call</h3>
-              <Link href={"#"}>+381 61 234 567</Link>
+              <Link href={"tel:+381616212415"}>+381616212415</Link>
             </div>
             <div className={styles.fb_item}>
               <h3>location</h3>
-              <Link href={"#"}>Ulica broj 12, Belgrade, Serbia</Link>
+              <Link target="_blank" href={"https://www.google.rs/maps/place/Majora+Zorana+Radosavljevi%C4%87a+178,+%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4/@44.8980581,20.2864219,17z/data=!3m1!4b1!4m5!3m4!1s0x475a5df5d1d04025:0x477b54599cb06e21!8m2!3d44.8980543!4d20.2889968?hl=sr&entry=ttu"}>Majora Zorana Radisavljevica 178</Link>
             </div>
           </div>
           <div className={styles.fb_copyright}>

@@ -94,7 +94,7 @@ const OurProjects = () => {
                   <Image
                     src={project.projectImg1}
                     className="parallax"
-                    data-speedy="0.2"
+                    data-speedy="0.4"
                     alt={project.title}
                     width={500}
                     height={1400}

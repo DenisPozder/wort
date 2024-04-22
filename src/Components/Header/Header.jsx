@@ -93,7 +93,7 @@ const Header = () => {
       <div className={`${styles.header_wrap} ${header ? styles.show : ''}`}>
         <div className={styles.hl_content}>
           <div className={styles.hl_header}>
-            <Link className={styles.hl_header_phone} href={"#"}>0601241468</Link>
+            <Link className={styles.hl_header_phone} href={"tel:+381616212415"}>+381616212415</Link>
             <span className={styles.hl_header_close} onClick={closeHeader}><X/></span>
           </div>
           <div className={styles.hl_links}>
@@ -104,8 +104,8 @@ const Header = () => {
             }
           </div>
           <div className={styles.hl_media}>
-            <Link href={"#"} target="_blank" className={styles.hl_email}><Mail /></Link>
-            <Link href={"#"} target="_blank" className={styles.hl_map}><MapPin /></Link>
+            <Link href={"mailto:office@wort.rs"} target="_blank" className={styles.hl_email}><Mail /></Link>
+            <Link href={"https://www.google.rs/maps/place/Majora+Zorana+Radosavljevi%C4%87a+178,+%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4/@44.8980581,20.2864219,17z/data=!3m1!4b1!4m5!3m4!1s0x475a5df5d1d04025:0x477b54599cb06e21!8m2!3d44.8980543!4d20.2889968?hl=sr&entry=ttu"} target="_blank" className={styles.hl_map}><MapPin /></Link>
           </div>
         </div>
       </div>

@@ -140,7 +140,7 @@ const Hero = () => {
               />
             </div>
             <div className={styles.hero_btn}>
-              <Button href={"#"} title={"contact us"} />
+              <Button href={"tel:+381616212415"} title={"contact us"} />
             </div>
           </div>
         </div>
