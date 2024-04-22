@@ -6,14 +6,36 @@ import Image from "next/image";
 import Link from "next/link";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import { useTheme } from "next-themes";
-import { AlignRight } from "lucide-react";
+import { AlignRight, Mail, MapPin } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { X } from "lucide-react";
+
+const HeaderLinks = [
+  {
+    title: "Home",
+    link: "/"
+  },
+  {
+    title: "Our Projects",
+    link: "/our-projects"
+  },
+]
 
 const Header = () => {
   const { theme } = useTheme();
   const darkTheme = theme === "dark";
 
-  const pathname = usePathname();
+  const [header, setHeader] = useState(false)
+
+  const openHeader = () => {
+    setHeader(!header)
+  }
+
+  const closeHeader = () => {
+    setHeader(false)
+  }
+
+  const pathname = usePathname()
 
   const [headerScroll, setHeaderScroll] = useState(false);
   const headerBackground = () => {
@@ -62,9 +84,28 @@ const Header = () => {
           <ToggleTheme />
           <div className={styles.header_menu}>
             <p>menu</p>
-            <span>
+            <span onClick={openHeader}>
               <AlignRight />
             </span>
+          </div>
+        </div>
+      </div>
+      <div className={`${styles.header_wrap} ${header ? styles.show : ''}`}>
+        <div className={styles.hl_content}>
+          <div className={styles.hl_header}>
+            <Link className={styles.hl_header_phone} href={"#"}>0601241468</Link>
+            <span className={styles.hl_header_close} onClick={closeHeader}><X/></span>
+          </div>
+          <div className={styles.hl_links}>
+            {
+              HeaderLinks.map((link, index) => (
+                <Link onClick={closeHeader} href={link.link} key={index} className={`${styles.header_link} ${pathname === link.link ? styles.active : ''}`}>{link.title}</Link>
+              ))
+            }
+          </div>
+          <div className={styles.hl_media}>
+            <Link href={"#"} target="_blank" className={styles.hl_email}><Mail /></Link>
+            <Link href={"#"} target="_blank" className={styles.hl_map}><MapPin /></Link>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@
 .hero_top {
     height: 100vh;
     position: relative;
+    max-height: 1400px;
 }
 
 /*----- Hero top images -----*/

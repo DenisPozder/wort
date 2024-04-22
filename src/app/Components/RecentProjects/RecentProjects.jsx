@@ -21,7 +21,7 @@ const RecentProjects = () => {
             </p>
           </div>
           <div className={`${styles.rp_btn} slide-in from-right`}>
-            <Button href={"#"} title={"all projects"} />
+            <Button href={"/our-projects"} title={"all projects"} />
           </div>
         </div>
         <div className={styles.rp_projects}>
@@ -45,7 +45,7 @@ const RecentProjects = () => {
                       </h2>
                       <p className={styles.rp_project_desc}>{project.desc}</p>
                       <div className={styles.rp_project_btn}>
-                        <Button href={project.link} title={"view project"} />
+                        <Button target="_blank" href={project.websiteLink} title={"view project"} />
                       </div>
                     </div>
                   </div>
@@ -62,7 +62,7 @@ const RecentProjects = () => {
                       </h2>
                       <p className={styles.rp_project_desc}>{project.desc}</p>
                       <div className={styles.rp_project_btn}>
-                        <Button href={project.link} title={"view project"} />
+                        <Button target="_blank" href={project.websiteLink} title={"view project"} />
                       </div>
                     </div>
                   </div>

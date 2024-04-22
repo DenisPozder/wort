@@ -132,7 +132,7 @@ const Hero = () => {
               }`}
             >
               <Image
-                src="/Home/sample.jpg"
+                src="/Home/HeroImg.jpg"
                 width={400}
                 height={100}
                 alt="Hero section image"
@@ -152,7 +152,7 @@ const Hero = () => {
               width={1520}
               height={1520}
               loading="lazy"
-              src={"/Home/sample.jpg"}
+              src={"/Home/HeroImg.jpg"}
               className={`${styles.hb_img} ${
                 isInHero || isScrolledPastHero ? styles.visible : styles.hidden
               }`}
