@@ -178,6 +178,16 @@
     .fb_item h3 {
         font-size: 1.1rem;
     }
+
+    .fb_search svg {
+        padding: 10px !important;
+        width: 36px;
+        height: 36px;
+    }
+
+    .fb_search h3 {
+        padding: 10px !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -220,8 +230,12 @@
 
     .fb_item {
         display: flex;
-        align-items: center;
+        align-items: center !important;
         flex-direction: column;
+    }
+
+    .fb_item:last-child {
+        justify-content: center;
     }
 }
 
@@ -233,6 +247,14 @@
     .footer_top .footer_btn {
         height: 45px;
         width: 100px;
+    }
+
+    .fb_ceo {
+        flex-direction: column;
+    }
+
+    .fb_search {
+        margin-bottom: 1rem;
     }
 }
 
