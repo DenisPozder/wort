@@ -39,6 +39,59 @@
     flex-direction: column;
 }
 
+.fb_ceo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.fb_search {
+    width: auto;
+    height: auto;
+    background-color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+}
+
+.fb_search svg {
+    color: var(--background_color);
+    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.fb_search h3 {
+    color: var(--background_color) !important;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.fb_search h3::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 80%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--background_color);
+}
+
+.fb_logo {
+    width: 160px;
+    height: auto;
+}
+
+.fb_logo img {
+    width: 100%;
+    height: 100%;
+}
+
 .fb_grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -60,7 +113,7 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    text-align: right;
+    align-items: flex-end;
 }
 
 .fb_item h3 {
@@ -72,6 +125,12 @@
 .fb_item a {
     text-decoration: none;
     color: var(--color);
+    display: flex;
+    align-items: center;
+}
+
+.fb_item a svg {
+    margin-right: 5px;
 }
 
 .fb_copyright {
