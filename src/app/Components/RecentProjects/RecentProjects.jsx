@@ -33,7 +33,7 @@ const RecentProjects = () => {
                   className={`${styles.rp_project} ${styles.swap}`}
                 >
                   <div className={`${styles.rp_project_img} img-left slide-in`}>
-                    <Image src={project.image} alt={project.title} fill />
+                    <Image src={project.mainImg} alt={project.title} fill />
                   </div>
                   <div
                     className={`${styles.rp_project_text} from-bottom slide-in`}
