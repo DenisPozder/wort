@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from './Components/Hero/Hero'
 import OurProjects from './Components/OurProjects/OurProjects'
+import RefreshScroll from '@/Components/RefreshScroll';
 
 export const metadata = {
   title: "Our Projects",
@@ -10,6 +11,7 @@ export const metadata = {
 const page = () => {
   return (
     <main className="page_section">
+      <RefreshScroll />
       <Hero />
       <OurProjects />
     </main>
