@@ -68,16 +68,8 @@ const Header = () => {
           >
             <Image
               width={500}
-              className={styles.hl_white}
               height={500}
-              src={"/wort-logo-white.png"}
-              alt="Wort logo"
-            />
-            <Image
-              width={500}
-              className={styles.hl_dark}
-              height={500}
-              src={"/wort-logo.png"}
+              src={darkTheme ? "/wort-logo-white.png" : "/wort-logo.png"}
               alt="Wort logo"
             />
           </Link>

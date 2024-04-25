@@ -51,21 +51,9 @@
     padding: 20px 0;
 }
 
-.header_logo .hl_white, .header_logo .hl_dark {
+.header_logo img {
     width: 100%;
     height: auto;
-}
-
-.header_logo .hl_white {
-    display: none;
-}
-
-.header_logo.dark .hl_white {
-    display: block;
-}
-
-.header_logo.dark .hl_dark {
-    display: none;
 }
 
 /*----- Header menu -----*/
