@@ -71,10 +71,6 @@
 .op_image_front img {
     width: 100%;
     height: auto;
-    position: absolute;
-    top: calc(50% + 50%);
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.3);
 }
 

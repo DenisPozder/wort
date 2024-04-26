@@ -93,8 +93,6 @@ const OurProjects = () => {
                 <div className={styles.op_image_front}>
                   <Image
                     src={project.projectImg1}
-                    className="parallax"
-                    data-speedy="0.2"
                     alt={project.title}
                     width={500}
                     height={1400}
@@ -107,8 +105,6 @@ const OurProjects = () => {
                     alt={project.title}
                     width={500}
                     height={1400}
-                    className="parallax"
-                    data-speedy="-0.04"
                     loading="lazy"
                   />
                 </div>
