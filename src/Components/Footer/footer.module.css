@@ -39,7 +39,7 @@
     flex-direction: column;
 }
 
-.fb_ceo {
+/* .fb_ceo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,7 +90,7 @@
 .fb_logo img {
     width: 100%;
     height: 100%;
-}
+} */
 
 .fb_grid {
     display: grid;

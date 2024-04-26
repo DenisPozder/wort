@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footer_bottom}>
-          <div className={`${styles.fb_ceo} slide-in from-bottom`}>
+          {/* <div className={`${styles.fb_ceo} slide-in from-bottom`}>
             <div className={styles.fb_search}>
               <Search />
               <h3>Luka Sekulić</h3>
@@ -29,7 +29,7 @@ const Footer = () => {
             <Link href={"/"} className={styles.fb_logo}>
               <img src={darkTheme ? "/wort-logo-white.png" : "/wort-logo.png"} />
             </Link>
-          </div>
+          </div> */}
           <div className={`${styles.fb_grid} slide-in from-bottom`}>
             <div className={styles.fb_item}>
               <h3>email</h3>

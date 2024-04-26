@@ -95,7 +95,7 @@
     top: 0;
     z-index: 99999;
     transform: translateX(100%);
-    transition: transform .4s cubic-bezier(.8,.24,1,.45);
+    transition: transform .4s ease;
 }
 
 .header_wrap.show {
