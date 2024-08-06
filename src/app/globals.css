@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "Belgro";
+  src: url('/Belgro.ttf') format("truetype");
+}
+
+:root {
+  --background_color: #ffffff;
+  --color: #10121b;
+  --mid_tone: #D9D9D9;
+  --body_font: "Raleway", sans-serif;
+  --heading_font: "Belgro";
+}
+
+[data-theme="dark"] {
+  --background_color: #10121b;
+  --color: #ffffff;
+  --mid_tone: #272931;
+  --body_font: "Raleway", sans-serif;
+  --heading_font: "Belgro";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body_font);
+  background-color: var(--background_color);
+}
+
+.page_section {
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: var(--background_color);
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading_font);
+  color: var(--color) !important;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+.from-left {
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.from-left.appear {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.from-right {
+  transform: translateX(150px);
+  opacity: 0;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.from-right.appear {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.img-right {
+  transform: translateX(70%) rotate(10deg);
+  transition: transform .3s ease-in-out;
+}
+
+.img-right.appear {
+  transform: translateX(0%) rotate(0deg);
+}
+
+.img-left {
+  transform: translateX(-70%) rotate(-10deg);
+  transition: transform .3s ease-in-out;
+}
+
+.img-left.appear {
+  transform: translateX(0%) rotate(0deg);
+}
+
+.from-bottom {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.from-bottom.appear {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.parallax {
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease !important;
+}
+
+@media only screen and (max-width: 1600px) {
+  h1 {
+    font-size: 4rem !important;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  h1 {
+    font-size: 2.4rem !important;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}

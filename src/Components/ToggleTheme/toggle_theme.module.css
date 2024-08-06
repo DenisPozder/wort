@@ -1,0 +1,39 @@
+.toggle_theme {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mid_tone);
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle_theme svg {
+    color: var(--color);
+}
+
+@media only screen and (max-width: 768px) {
+    .toggle_theme {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .toggle_theme {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .toggle_theme {
+        width: 32px;
+        height: 32px;
+    }
+}

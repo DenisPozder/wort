@@ -1,0 +1,263 @@
+.our_projects {
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+}
+
+/*----- Single Project -----*/
+.op_project {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*----- Project Header -----*/
+.op_project_header {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+    background-color: var(--mid_tone);
+    z-index: 10;
+}
+
+.op_header_content {
+    margin: 0 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.op_header_sd {
+    font-weight: bold;
+    margin: 2rem 0;
+    max-width: 800px;
+    transition-delay: .2s;
+}
+
+.op_header_td {
+    max-width: 800px;
+    transition-delay: .4s;
+}
+
+.op_header_btn {
+    width: 20%;
+    height: 100px;
+}
+
+/*----- Our project images -----*/
+.op_project_images {
+    width: 100%;
+    height: 1400px;
+    overflow: hidden;
+}
+
+.op_images_content {
+    margin: 0 200px;
+    width: auto;
+    height: 100%;
+    position: relative;
+}
+
+.op_image_front {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.op_image_front img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 15px 8px rgba(0,0,0,0.3);
+}
+
+.op_image_back {
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    right: 0 !important;
+    top: 200px;
+    overflow: hidden;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+}
+
+.op_image_back img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: calc(50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1600px) {
+    .op_header_btn {
+        height: 65px;
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .op_header_content {
+        margin: 0 160px;
+    }
+
+    .op_images_content {
+        margin: 0 160px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .op_header_content {
+        margin: 0 80px;
+    }
+
+    .op_images_content {
+        margin: 0 80px;
+    }
+
+    .op_project_images {
+        height: 1000px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .op_header_content {
+        margin: 0 40px;
+        flex-direction: column;
+    }
+
+    .op_images_content {
+        margin: 0 40px;
+    }
+
+    .op_project_images {
+        height: 900px;
+    }
+
+    .op_header_btn {
+        height: 60px;
+        width: 180px;
+        margin-top: 1.5rem;
+    }
+
+    .op_header_sd {
+        margin: 1.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .op_header_btn {
+        height: 50px;
+        width: 120px;
+    }
+
+    .op_header_content {
+        margin: 0 20px;
+        flex-direction: column;
+    }
+
+    .op_images_content {
+        margin: 0 20px;
+    }
+
+    .op_image_front {
+        width: 80%;
+    }
+
+    .op_project_images {
+        height: 800px;
+    }
+
+    .op_image_back {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .op_header_btn {
+        height: 45px;
+        width: 100px;
+    }
+
+    .op_header_content {
+        margin: 0 15px;
+        flex-direction: column;
+    }
+
+    .op_images_content {
+        margin: 0 15px;
+    }
+
+    .op_image_front {
+        width: 85%;
+    }
+
+    .op_project_images {
+        height: 750px;
+    }
+
+    .op_image_back {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .op_header_btn {
+        height: 45px;
+        width: 100px;
+    }
+
+    .op_header_content {
+        margin: 0 10px;
+        flex-direction: column;
+    }
+
+    .op_images_content {
+        margin: 0 10px;
+    }
+
+    .op_image_front {
+        width: 85%;
+    }
+
+    .op_project_images {
+        height: 650px;
+    }
+
+    .op_image_back {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .op_header_content {
+        margin: 0 5px;
+    }
+
+    .op_images_content {
+        margin: 0 5px;
+    }
+
+    .op_image_front {
+        width: 85%;
+    }
+
+    .op_project_images {
+        height: 600px;
+    }
+
+    .op_image_back {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .op_project_images {
+        height: 500px;
+    }
+}

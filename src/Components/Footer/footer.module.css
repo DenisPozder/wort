@@ -1,0 +1,275 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--background_color);
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.footer_content {
+    margin: 0 200px;
+    width: auto;
+    height: auto;
+}
+
+.footer_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_top h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.footer_top .footer_btn {
+    width: 20%;
+    height: 100px;
+    margin: 4rem 0;
+    transition-delay: .2s;
+}
+
+.footer_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* .fb_ceo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.fb_search {
+    width: auto;
+    height: auto;
+    background-color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+}
+
+.fb_search svg {
+    color: var(--background_color);
+    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.fb_search h3 {
+    color: var(--background_color) !important;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.fb_search h3::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 80%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--background_color);
+}
+
+.fb_logo {
+    width: 160px;
+    height: auto;
+}
+
+.fb_logo img {
+    width: 100%;
+    height: 100%;
+} */
+
+.fb_grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    position: relative;
+    border-top: 2px solid var(--color);
+    border-bottom: 2px solid var(--color);
+    margin-bottom: 8rem;
+    transition-delay: .2s;
+}
+
+.fb_item {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 0;
+}
+
+.fb_item:last-child {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.fb_item h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: .6rem;
+}
+
+.fb_item a {
+    text-decoration: none;
+    color: var(--color);
+    display: flex;
+    align-items: center;
+}
+
+.fb_item a svg {
+    margin-right: 5px;
+}
+
+.fb_copyright {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fb_copyright p {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.fb_copyright p svg {
+    margin: 0 10px;
+}
+
+@media only screen and (max-width: 1600px) {
+    .footer_top .footer_btn {
+        height: 65px;
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .footer_content {
+        margin: 0 160px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer_content {
+        margin: 0 80px;
+    }
+
+    .fb_copyright p {
+        font-size: 1.1rem;
+    }
+
+    .fb_item h3 {
+        font-size: 1.1rem;
+    }
+
+    .fb_search svg {
+        padding: 10px !important;
+        width: 36px;
+        height: 36px;
+    }
+
+    .fb_search h3 {
+        padding: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer_content {
+        margin: 0 40px;
+    }
+
+    .fb_grid {
+        margin-bottom: 6rem;
+    }
+
+    .fb_copyright p {
+        font-size: 1rem;
+    }
+
+    .fb_item h3 {
+        font-size: 1rem;
+    }
+
+    .footer_top .footer_btn {
+        height: 60px;
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .footer_content {
+        margin: 0 20px;
+    }
+
+    .footer_top .footer_btn {
+        height: 50px;
+        width: 120px;
+    }
+
+    .fb_grid {
+        margin-bottom: 4rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .fb_item {
+        display: flex;
+        align-items: center !important;
+        flex-direction: column;
+    }
+
+    .fb_item:last-child {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer_content {
+        margin: 0 15px;
+    }
+
+    .footer_top .footer_btn {
+        height: 45px;
+        width: 100px;
+    }
+
+    .fb_ceo {
+        flex-direction: column;
+    }
+
+    .fb_search {
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .footer_content {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .footer_content {
+        margin: 0 5px;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    
+}

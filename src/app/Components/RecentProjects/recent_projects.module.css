@@ -1,0 +1,267 @@
+.recent_projects {
+    width: 100%;
+    height: auto;
+    margin: 8rem 0;
+}
+
+.rp_content {
+    width: auto;
+    height: auto;
+    margin: 0 200px;
+}
+
+.rp_header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+}
+
+.rp_header_top {
+    display: flex;
+    flex-direction: column;
+}
+
+.rp_title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.rp_par {
+    color: var(--color);
+    max-width: 360px;
+    font-size: 1.1rem;
+}
+
+.rp_btn {
+    width: 20%;
+    height: 100px;
+}
+
+/*----- Recent Projects -----*/
+
+.rp_projects {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 6rem;
+}
+
+.rp_project {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.rp_project_text {
+    width: 45%;
+    height: 100%;
+    display: flex;
+}
+
+.rp_project_text .rp_text_right {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.rp_project_text .rp_text_left {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.rp_project_btn {
+    width: 300px;
+    height: 100px;
+}
+
+.rp_project_desc {
+    margin: 2rem 0;
+}
+
+.rp_project_img {
+    width: 55%;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 60px;
+}
+
+.rp_project_img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1600px) {
+    .rp_btn {
+        height: 65px;
+        width: 240px;
+    }
+
+    .rp_project_btn {
+        height: 65px;
+        width: 240px;
+    }
+
+    .rp_project {
+        gap: 20px;
+    }
+
+    .rp_project_text {
+        width: 40%;
+    }
+
+    .rp_project_img {
+        width: 60%;
+        height: 460px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .rp_content {
+        margin: 0 160px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .rp_content {
+        margin: 0 80px;
+    }
+
+    .rp_project_img {
+        width: 60%;
+        height: 400px;
+    }
+
+    .recent_projects {
+        margin: 6rem 0;
+    }
+
+    .rp_header {
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .rp_btn {
+        height: 60px;
+        width: 180px;
+    }
+
+    .rp_project_btn {
+        height: 60px;
+        width: 180px;
+    }
+
+    .rp_content {
+        margin: 0 40px;
+    }
+
+    .rp_project_img {
+        width: 60%;
+        height: 380px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .rp_btn {
+        height: 50px;
+        width: 120px;
+    }
+
+    .rp_project_btn {
+        height: 50px;
+        width: 120px;
+    }
+
+    .rp_content {
+        margin: 0 20px;
+    }
+
+    .rp_project {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .rp_project_text {
+        width: 100%;
+        height: auto;
+    }
+
+    .rp_project_img {
+        width: 100%;
+        height: 400px !important;
+    }
+
+    .rp_project_text .right {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .rp_header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rp_btn {
+        margin-top: 1rem;
+    }
+
+    .rp_project_text .rp_text_left {
+        align-items: flex-start;
+    }
+
+    .rp_project.swap {
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .rp_btn {
+        height: 45px;
+        width: 100px;
+    }
+
+    .rp_project_btn {
+        height: 45px;
+        width: 100px;
+    }
+
+    .rp_content {
+        margin: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .rp_content {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .rp_content {
+        margin: 0 5px;
+    }
+}
